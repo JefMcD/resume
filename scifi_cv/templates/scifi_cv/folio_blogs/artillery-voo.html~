@@ -1,0 +1,42 @@
+
+<div class='top-margin'>
+    <img class='close-btn' src="{% static 'scifi_cv/img/general/close.svg'  %}" alt='close btn' >
+</div>
+
+<h2>Artillery Voo Comix</h2>
+<div class="folio-summary-mainimage">
+	<a href="https://www.artillery-voo.com">
+		<img src="{% static 'scifi_cv/img/portfolio/artillery.jpg' %}" alt="artillery voo website></div>
+	</a>
+<div>
+	<b>URL: </b><a href="https://www.artillery-voo.com">www.artillery-voo.com</a>
+</div>
+
+<div>
+	<b>Github: </b><a href="https://www.github.com">www.github.io/artillery-voo</a>
+</div>
+<div>
+	<h2>Summary :</h2>
+	Much Satirical musings from Artillery Voo and laughter at liberal tears. 
+	Front end done with Html, CSS and Javascript with server requests and e-commerce solution implemented using PHP and MySQL.
+	This site should not be viewed by anyone with purple hair, wears a mask or who needs pronouns after their name. 
+	If you are such a person, 'I am Not The Droid You're Looking For'
+</div>
+
+<div>
+	<h3>Tech Used :html:css:js:php:MySQL</h3>
+	<div class='tech-used-box'>
+		<img src="../static/scifi_cv/img/HTML-white.svg">
+		<img src="../static/scifi_cv/img/css-white.svg">
+		<img src="../static/scifi_cv/img/JS-white.svg">
+		<img src="../static/scifi_cv/img/php-white.svg">
+		<img src="../static/scifi_cv/img/MySQL-white.svg">
+	</div>
+</div>
+
+<div>
+	<h3>Graphics Apps Used :</h3>
+	Krita, Gimp, Inkspace, Dude who draws stuff
+</div>
+
+

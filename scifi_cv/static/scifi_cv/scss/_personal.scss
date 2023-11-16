@@ -1,0 +1,56 @@
+@use 'summer-theme';
+@use 'fonts';
+
+.person-section-container{
+  position:relative;
+  display: flex;
+  justify-content: flex-end;
+
+  margin-right: 3rem;
+}
+.personal-section{
+    position: relative;
+    display: block;
+
+    top: 0;
+    left: 0;
+    width:100%;
+
+    padding: 1rem;
+    margin-bottom: 3rem;
+
+    float: right;
+
+    //border: 2px solid white;
+}
+
+
+.personal-pic{
+  position: relative;
+  display: block;
+
+  margin-right: 5rem;
+  padding: 1rem;
+  width: 30rem;
+  aspect-ratio: 1/1;
+  border: 1px;
+
+  background-color: summer-theme.$dk_transparent-001;
+  border: 2px solid summer-theme.$orange-001;
+  border-radius: 0.5rem;
+
+  img{
+      width:100%;
+      object-fit: cover;
+  }
+}
+
+
+.personal-para{
+  position: relative;
+  display: block;
+  margin-top: 10rem;
+
+  padding: 1rem;
+
+}

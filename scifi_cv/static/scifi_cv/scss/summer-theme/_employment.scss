@@ -1,0 +1,383 @@
+@use 'summer-theme';
+@use 'fonts';
+
+
+
+.job-list{
+    position: relative;
+
+    justify-content: center;
+    width: 40rem;
+    height: 60vh;
+
+    //background-color: orange;
+    //border: 2px solid green;
+
+    ul{
+        text-align: center;
+        .machine-img{
+            opacity:0.0;
+        }
+    }
+}
+
+
+.job-flag{
+    //catchall for the classes within the box
+    //used by javascript as a selector
+}
+.job{   
+    position:absolute;
+    display:block;
+
+    top: 0;
+    left: 0;
+    width: 10rem;
+    aspect-ratio: 1/1;
+
+
+    padding: 0.5rem;
+ 
+
+    background-color: summer-theme.$semi-opaque-001;
+    border: 2px solid summer-theme.$dk-002;
+    border-radius: 5%;
+
+    transition-duration: 450ms;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color color;
+
+    z-index:1;
+
+    .top{
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        .number-icon{
+            padding:0.2rem;
+
+            width: 3rem;
+            aspect-ratio: 1/1;
+
+            background-color: summer-theme.$lt-002;
+            border: 2px solid summer-theme.$lt-001;
+            border-radius: 4px;
+
+            color: summer-theme.$dk-001;
+            font-family: fonts.$scifi;
+            font-size:24pt;
+
+        }
+        .job-title{
+            flex-grow: 1;
+
+            align-self: center;
+
+            font-size:16pt;
+            color: summer-theme.$lt-001;
+        }
+        
+    }
+
+    .bottom{
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        .job-summary{
+            font-size:12pt;
+            color: summer-theme.$lt-001;
+            text-align: left;
+        }
+    }
+}
+.job:hover,
+.job:focus,
+.job:target{
+    background-color: summer-theme.$green-001;
+    color: summer-theme.$dk-002;
+}
+.web-developer{
+    top: 0rem;
+    left:1rem;
+}
+
+.artist{
+    top: 10rem;
+    left:26rem;
+}
+
+.software-eng{
+    top: 21rem;
+    left:6rem;
+}
+
+
+
+.machine-animation{
+    position: absolute;
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    overflow: hidden;
+
+    .cog{
+        position: absolute;
+
+        left:50%;
+        top: -100px;
+
+        transform: translate
+        //background-color: summer-theme.$lt-001;
+        //border: 2px solid summer-theme.$dk-002;
+
+        img{
+            width:100%;
+        }
+    }
+    .cogsize-vsmall{
+        img{
+            width:40px;
+            aspect-ratio: 1/1;
+        }
+
+
+        animation-name: drop-cog;
+        animation-delay: 0ms;
+        animation-timing-function: ease-in-out;
+        animation-duration: 2000ms;
+    }
+    .cogsize-sm{
+        img{
+            width:60px;
+            aspect-ratio: 1/1;
+        }
+
+        animation-name: drop-cog;
+        animation-delay: 0ms;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1500ms;
+    }
+    .cogsize-med{
+        img{
+            width:80px;
+            aspect-ratio: 1/1;
+        }
+
+        animation-name: drop-cog;
+        animation-delay: 0ms;
+        animation-timing-function: ease-in-out;
+        animation-duration: 700ms;
+    }
+
+    .rando-size{
+        img{
+            width:30px;
+            aspect-ratio: 1/1;
+        }
+
+        animation-name: drop-cog;
+        animation-delay: 0ms;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1000ms;
+    }
+
+    .vscog1{
+        left: 50%;
+        top: 90%;
+
+        animation-name: drop-cog;
+        animation-delay: 0ms;
+        animation-timing-function: ease-in-out;
+        animation-duration:900ms;
+    }
+    .vscog2{
+        left: 54%;
+        top: 84%;
+        animation-name: drop-cog;
+        animation-delay: 0ms;
+        animation-timing-function: ease-in-out;
+        animation-duration:650ms;
+    }
+    .vscog3{
+        left: 43%;
+        top: 63%;
+        animation-name: drop-cog;
+        animation-delay: 0ms;
+        animation-timing-function: ease-out;
+        animation-duration:775ms;
+    }
+    .vscog4{
+        left: 51%;
+        top: 77%;
+        animation-name: drop-cog;
+        animation-delay: 0ms;
+        animation-timing-function: ease-in;
+        animation-duration:450ms;
+    }
+    .vscog5{
+        left: 53%;
+        top: 16%;
+    }
+
+    .smallcog1{
+        left: 41%;
+        top: 83%;
+    }
+
+    .smallcog2{
+        left: 37%;
+        top: 34%;
+    }
+    .smallcog3{
+        left: 53%;
+        top: 67%;
+    }
+    .smallcog4{
+        left: 43%;
+        top: 72%;
+    }
+
+    .lightbulb{
+        left: 55%;
+        top: 27%;
+    }
+
+    .medcog1{
+        left: 31%;
+        top: 21%;
+    }
+    .medcog2{
+        left: 42%;
+        top: 23%;
+    }
+    .medcog3{
+        left: 59%;
+        top: 9%;
+    }
+
+    .money-cog{
+        img{
+            width:80px;
+            aspect-ratio: 1/1;
+        }
+        left: 47%;
+        top: 0%;
+
+        animation-name: float-cog;
+        animation-delay: 00ms;
+        animation-timing-function: ease-in-out;
+        animation-duration: 2000ms;
+    }
+
+    .main-cog{
+        img{
+            width:120px;
+            aspect-ratio: 1/1;
+        }
+        left: 41%;
+        top: 41%;
+
+        animation-name: drop-cog;
+        animation-delay: 0ms;
+        animation-timing-function: ease-in-out;
+        animation-duration: 830ms;
+    }
+
+    .house-cog{
+        img{
+            width:100px;
+            aspect-ratio: 1/1;
+        }
+        left: 35%;
+        top: 5%;
+
+        animation-name: drop-cog;
+        animation-delay: 0ms;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1200ms;
+    }
+    .car-cog{
+        img{
+            width:80px;
+            aspect-ratio: 1/1;
+        }
+        left: 28%;
+        top: 38%;
+
+        animation-name: drop-cog;
+        animation-delay: 0ms;
+        animation-timing-function: ease-in-out;
+        animation-duration: 2400ms;
+    }
+
+    .rando1{
+        left: 30%;
+        top: 17%;
+
+        animation-name: drop-cog;
+        animation-delay: 0ms;
+        animation-timing-function: ease-in-out;
+        animation-duration: 750ms;
+    }
+
+    .rando2{
+        left: 49%;
+        top: 67%;
+    }
+
+    .rando3{
+        left: 51%;
+        top: 35%;
+        z-index:3;
+    }
+
+    .rando4{
+        left: 31%;
+        top: 3%;
+        z-index:3;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

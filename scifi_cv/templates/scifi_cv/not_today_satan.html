@@ -1,0 +1,52 @@
+
+
+
+{% extends 'scifi_cv/main_layout.html' %}
+{% load static %}
+{% block title %}
+    Jef McDonald Portfolio
+{% endblock %}
+
+{% block section %}
+
+
+
+<section class='portfolio-wrapper'>
+
+
+    <div>
+        Not Today Satan!
+    </div>
+    
+    <div class='hero-image'>
+        <img src="{% static 'scifi_cv/img/hero/drawing.png' %}" alt=''>
+    </div>
+
+    <div class="folio-titles-wrapper">
+        <section class='folio-titles-section'>
+            <h2>Error: </h2>
+            <h4>{{sitename}}</h4>
+            <div class="btn animate">
+                <div class="btn-hover-state"></div>
+                <span>Contact</span>
+            </div>
+        <section>
+    </div>
+
+
+</section>
+
+
+<!----
+<p id="viewsize"></p>
+
+<script>
+var w = window.innerWidth;
+var h = window.innerHeight;
+
+var x = document.getElementById("viewsize");
+x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
+</script>
+-->
+
+{% endblock %}

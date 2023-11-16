@@ -1,0 +1,242 @@
+@use 'blue-theme';
+@use 'fonts';
+
+
+
+
+
+
+/*******************************************************
+*
+*   Hero Image Container
+*
+********************************************************/
+.hero-box{
+    position: relative;
+    display: block;
+
+    width: 24rem;
+
+
+    margin-right:1rem; 
+
+    //background-color: rgb(255, 174, 0);
+    //border: 5px solid rgb(227, 227, 253);
+}
+
+.hero-image{
+    position: relative;
+    top: 3rem;
+    left: 3rem;
+
+    opacity: 0.7;
+
+    img{
+        max-width: 18rem;
+    }
+}
+
+/********************************************************
+***
+***     End Hero Container 
+***
+*********************************************************/
+
+
+
+/********************************************************
+***
+***     Folio Scroller Block
+***
+*********************************************************/
+.portfolio-mobile{
+    position:relative;
+    top: 0rem;
+    left: 0;
+    
+    width: 420px;
+    height:520px;
+
+    //background-color: purple;
+    border: 2px solid blue-theme.$lt-002;
+    border-radius: 4px;
+
+    overflow:hidden;
+    z-index: 1;
+
+    .semi-opaque-border{
+        border: 0.5rem solid blue-theme.$semi-opaque-001;
+        border-radius: 4px;
+
+        height:100%;
+        
+        .door{
+            position:absolute;
+            width:210px;
+            height: 100%;
+            opacity: 0.5;
+            z-index:2;
+            
+            img{
+                object-fit: cover;
+                
+                width:100%;
+            }
+        }
+        .left{
+            top:0;
+            left:-210px;
+        }
+        .left.animate{
+            animation-name: open-left-door;
+            animation-duration: 750ms;
+            animation-delay:1200ms;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both; 
+        }
+        .right{
+            top:0;
+            right:-210px;
+        }
+        .right.animate{
+            animation-name: open-right-door;
+            animation-duration: 750ms;
+            animation-delay:1200ms;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both;
+        }
+
+    }
+
+}
+.folio-scroller{
+    position:relative;
+
+    margin: 0.5rem 0rem 0.5rem 0;
+    height: 29rem;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.folio-scroller::-webkit-scrollbar{
+    width: 0;
+}
+.folio-item{
+    position:relative;
+
+    left: 50%;
+    transform:translate(-50%,0%);
+    width: 20rem;
+    height: 10rem;
+
+
+    text-align: center;
+    color:blue-theme.$lt-001;
+    //background-color: greenyellow;
+    border: 1px solid blue-theme.$lt-001;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    padding:0.2rem;
+
+    z-index: 1;
+    //object-fit: cover;
+    overflow:hidden;
+
+
+    transition-duration: 350ms;
+    transition-property: background-color color;
+    .website-name{
+        margin-bottom: 0.2rem;
+    }
+    .site-image{
+        padding:0.2rem;
+        margin-bottom:1rem;
+    }
+    img{
+        width:100%;
+        object-fit: contain;
+    }
+}
+.folio-item:hover,
+.folio-item:target,
+.folio-item:focus{
+    background-color: blue-theme.$lt-002;
+    color: blue-theme.$yellow-002
+
+}
+
+/********************************************************
+***
+***     End Folio Scroller Block
+***
+*********************************************************/
+
+
+
+
+
+
+.personal-info{
+    position: absolute;
+    display: flex;
+
+    align-items: center;
+
+    top: 0;
+    left: 3rem;
+
+    margin-right: 2rem;
+
+    width:20rem;
+    height: 500px;
+
+    //background-color: peru;
+    //border: 2px solid white;
+
+}
+
+
+.personal-info-table{
+    width:100%;
+  
+
+    //border: 2px solid blue-theme.$lt_001;
+
+    th, tr, td{
+        //border: 2px solid blue-theme.$lt-001;
+    }
+
+    .pit-data{
+        height: 2rem;
+        padding: 0.5rem;
+    }
+    .item1{
+        width: 7rem;
+        color: blue-theme.$red-001;
+    }
+    .item2{
+        width: 13rem;
+
+    }
+
+}
+
+
+
+@keyframes open-left-door{
+    0%{
+        transform:translateX(100%)
+    }
+    100%{
+        transform:translateX(-100%)
+    }
+}
+
+@keyframes open-right-door{
+    0%{
+        transform:translateX(-100%)
+    }
+    100%{
+        transform:translateX(100%)
+    }
+}

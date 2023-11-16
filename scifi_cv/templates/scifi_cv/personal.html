@@ -1,0 +1,101 @@
+
+
+
+{% extends 'scifi_cv/main_layout.html' %}
+{% load static %}
+{% block title %}
+    Jef McDonald Personal
+{% endblock %}
+
+
+{% block pagespecific_javascript %}
+    <script src="{% static 'scifi_cv/js/personal.js' %}?v2.40" type="text/javascript" defer> </script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+{% block section %}
+
+
+
+<section class='portfolio-wrapper'>
+
+    <div class="main-center-stage">
+
+        <div class = "personal-section-container">
+            <div class='personal-section'>
+
+                <div><b>Name : </b>Jeffrey McDonald Ralston</div>
+                <div><b>Country : </b>UK/Scotland</div>
+                <div><b>City : </b>Glasgow</div>
+                <div><b>Travel : </b>Can Travel Worldwide</div>
+                <div><b>Availability : </b>Immediate</div>
+            </div>
+        </div>
+
+
+        <div class="personal-pic">
+            <img src="{% static 'scifi_cv/img/hero/intro1.jpg' %}">
+        </div>
+
+    </div>
+
+    <div class="personal-para">
+        I enjoy music and play the guitar, and enjoy messing around learning heavy metal riffs. Im a horror and comic book fan too and Usually have a few books on the go, both comics and regular books. I love science and am especially interested in AI. I love the beach, collecting shells and walks in nature. Id be especially interested in any projects that involved any of these things.
+    </div>
+
+
+    {% include 'scifi_cv/contact-form.html' %}
+
+    <!--
+    <div class='mobile-only-para'>
+        <div id="message-title">Factoid</div>
+        <div class="msg-para">
+            The picture of me was taken at Ardrossan beach during the summer. It doesnt get any better than the seaside, Ice cream and Fish'n'Chips!
+        </div>
+    </div>
+    -->
+
+    <div class='information-box'>
+        <div class="folio-titles-wrapper">
+            <section class='folio-titles-section'>
+                <h2 class='{{animation}}'>Personal: </h2>
+                <h4 class='animate'>{{sitename}}</h4>
+
+                <div class="btn contactBtn {{animation}}" data-contact-btn-click='true'>
+                    <div class="btn-hover-state" data-contact-btn-click='true'></div>
+                    <span data-contact-btn-click='true'>Contact</span>
+
+                </div>
+    
+            <section>
+        </div>
+        <div class='message-of-the-day portfolio-desktop'>
+            <div id="message-title">Factoid..</div>
+            <div class="msg-para">
+                The picture of me was taken at Ardrossan beach during the summer. It doesnt get any better than the seaside, Ice cream and Fish'n'Chips!
+            </div>
+        </div>
+    </div>
+
+    {% include 'scifi_cv/contact-form.html' %}
+<!--
+    {% include 'scifi_cv/footer.html' %}
+-->
+
+    
+
+</section>
+
+
+
+{% endblock %}

@@ -1,0 +1,230 @@
+/***********************************************************
+**
+**  The Cube
+**
+**
+***********************************************************/
+
+.cube-stage::before{
+    position:absolute;
+    content:'stage';
+    top:0;
+    left: 0;
+}
+
+.cube-stage{
+    position: relative;
+    display: block;
+    width:40rem;
+    aspect-ratio: 1/1;
+    margin: auto;
+
+    border: 2px solid white;
+    background-color: purple;
+}
+
+
+.cube-wrapper{
+    position: relative;
+    display: block;
+
+    width: 30rem;
+    aspect-ratio: 1/1;
+    margin: auto;
+    top: 5rem;
+
+
+    border: 2px solid yellow;
+    background-color: orange;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************************************
+**
+**  Card The Fair
+**
+**///////////////////////////////////////////////////////////
+.card{
+    position: relative;
+    display: block;
+    width:40rem;
+    aspect-ratio: 1/1;
+    margin: auto;
+
+    border: 2px solid white;
+    background-color: purple;
+    backface-visibility: visible;
+    perspective: 1000px;
+    perspective-origin: center;
+}
+.card::before{
+    content:'card';
+    position:absolute;
+    display: inline-block;
+}
+.card__content::before{
+    position:absolute;
+    content: 'card__content';
+    color: white;
+    top: 0;
+    left:0;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************
+*
+    Transforms apply to the element
+    They are applied when the element is created
+
+    Another situation is a transform that is applied on hover or on an event
+    Here the transform is applied when an element enters the state
+    A transition is created on the base elemnt to control the transition 
+
+    The transitions and the transforms happen within the same element but in its 
+    different states
+    The element starting state  - transition defn
+    The elemnt hover state      - the transform to apply
+
+    Transitions refer to child elements
+    transform-style: preserve-3d applied to child elemnts
+
+*/////////////////////////////////////
+
+
+.card__content{
+    position: relative;
+    display:block;
+    width: 30rem;
+    aspect-ratio: 1/1;;
+    margin:auto;
+    margin-top: 5rem;
+    border:5px solid yellow;
+    background-color: orange;
+
+    text-align:center;
+
+    transition: transform 2s ease-in;
+    transition-delay: 0ms;
+    transform-style: preserve-3d; // This changes immediate child elemnts to 3d planes
+
+
+
+}
+
+
+.card:hover .card__content{
+    transform: rotateY(180deg);
+
+}
+
+
+.card__front,
+.card__back{
+    position: absolute;
+    padding: 2rem;
+    top:50%;
+    right:0;
+    bottom:0;
+    left:0;
+    transform-style: preserve-3d;
+
+ }
+.card__front{
+    color: white;
+
+
+}
+.card__front_title{
+    font-size: 3rem;
+    color: blue;
+    transform: translateZ(3rem);
+
+}
+.card__front_subtitle{
+    transform: translateZ(6rem);
+}
+
+
+.card__back{
+    color: white;
+    transform: rotateY(180deg) translateZ(5rem);
+
+
+}
+
+
+.card__back_title{
+    font-size: 4rem;
+    color: yellow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////
+/// sandbox
+/// ///////////////////////////////////////////////////////////////
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="data:''">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  href="{% static 'scifi_cv/css/style.css' %}?v0.03" rel="stylesheet">
+
+    <script src="{% static 'scifi_cv/js/general.js' %}?v0.01" type="text/javascript" defer> </script>
+    {% block pagespecific_javascript %} {% endblock %}
+
+    <title> {% block title %}
+            {% endblock %}
+    </title>
+</head>
+
+<body>
+    <div class = "nav-container">
+        <header class="nav_wrapper">
+            {% include 'scifi_cv/top_navbar.html' %}
+        </header>
+    </div>
+
+    {% block section %}
+    {%endblock%}
+
+</body>
+</html>

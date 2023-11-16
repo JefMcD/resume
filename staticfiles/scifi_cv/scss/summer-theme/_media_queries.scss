@@ -1,0 +1,475 @@
+/*
+    max-width:750px 
+    means
+    All screens <= 750px
+
+    min-width:100px
+    means
+    All screens >= 100px
+
+*/
+
+
+
+
+
+
+// All Screen Sizes between 0 and 480
+@media  only screen and (min-width:0px) and (max-width:480px){    // Mobile Devices
+
+    ///////////////////////////////////////////////////
+    /// 
+    ///     navbar
+    /// 
+    /// ///////////////////////////////////////////////
+    .nav_wrapper {
+        height: 6rem;
+        padding: 0 50px;
+    }
+
+    .logo {
+        font-size: 18pt;
+    }
+
+
+    //////////////////////////////////////////////////
+    /// 
+    ///     Portfolio Page
+    /// 
+    /// /////////////////////////////////////////////
+    .portfolio-mobile{
+        width: 18rem;
+    }
+    .folio-item{
+        width: 16rem;
+    }
+
+    .portfolio-desktop{
+        display:none
+    }
+    /////////////////////////////////////////////////
+
+
+
+
+    //////////////////////////////////////////////////
+    /// 
+    /// Employment Page
+    /// 
+    //////////////////////////////////////////////////
+    .web-developer{
+        top: 0rem;
+        left:1rem;
+    }
+    
+    .artist{
+        top: 10rem;
+        left:1rem;
+    }
+    
+    .software-eng{
+        top: 21rem;
+        left:1rem;
+    }
+
+    //////////////////////////////////////////////////
+    /// 
+    /// Education Page
+    /// 
+    //////////////////////////////////////////////////
+    .svg-graphics{
+        display:none;
+    }
+    .main-left-stage{
+        justify-content: center;
+    }
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+// All Screen Sizes between 481 and 840
+@media only screen and (min-width:481px) and (max-width:849px){    // Tablets Devices
+    ///////////////////////////////////////////////////
+    /// 
+    ///     navbar
+    /// 
+    /// ///////////////////////////////////////////////
+
+    .nav_wrapper {
+        height: 6rem;
+        padding: 0 50px;
+    }
+
+    .logo {
+        font-size: 18pt;
+    }
+
+    //////////////////////////////////////////////////
+    /// 
+    ///     Portfolio Page
+    /// 
+    /// /////////////////////////////////////////////
+
+
+    .portfolio-desktop{
+        display:none
+    }
+
+    //////////////////////////////////////////////////
+    /// 
+    /// Employment Page
+    /// 
+    //////////////////////////////////////////////////
+    .web-developer{
+        top: 0rem;
+        left:1rem;
+    }
+    
+    .artist{
+        top: 10rem;
+        left:1rem;
+    }
+    
+    .software-eng{
+        top: 21rem;
+        left:1rem;
+    }
+
+        //////////////////////////////////////////////////
+    /// 
+    /// Education Page
+    /// 
+    //////////////////////////////////////////////////
+    .svg-graphics{
+        display:none;
+    }
+    .main-left-stage{
+        justify-content: center;
+    }
+
+} 
+
+
+
+
+
+// All Screen Sizes between 850 and 1025
+@media only screen and (min-width:850px) and (max-width:1025px){   // Laptops Devices
+    ///////////////////////////////////////////////////
+    /// 
+    ///     navbar
+    /// 
+    /// ///////////////////////////////////////////////
+
+    .nav_wrapper {
+        height: 6rem;
+        padding: 0 50px;
+    }
+
+    .logo {
+        font-size: 24pt;
+    }
+
+
+    //////////////////////////////////////////////////
+    /// 
+    ///     Portfolio Page
+    /// 
+    /// /////////////////////////////////////////////
+    .portfolio-mobile{
+        top: 0;
+
+        margin-left: 0.2rem;
+    }
+    .hero-box{
+        margin-right:0.2rem; 
+    }
+    .message-of-the-day{
+        padding-top: 2rem;
+    }
+
+
+
+
+    //////////////////////////////////////////////////
+    /// 
+    /// Employment Page
+    /// 
+    //////////////////////////////////////////////////
+    .webdev-panel{
+        left: -25rem;
+    }
+    .show-webdev-panel{
+        transform: translateX(25rem);
+        opacity:1;
+        z-index:3;
+    }
+    
+    
+    .artist-panel{
+        right: -26rem;
+    }
+    .show-artist-panel{
+        transform: translateX(-26rem);
+        opacity:1;
+        z-index:3;
+    }
+    
+    .softeng-panel{
+        left: -26rem;
+    }
+    .show-softeng-panel{
+        transform: translateX(26rem);
+        opacity:1;
+        z-index:3;
+    }
+
+
+    //////////////////////////////////////////////////
+    /// 
+    /// Education Page
+    /// 
+    //////////////////////////////////////////////////
+
+    .main-left-stage{
+        justify-content: flex-start;
+    }
+    .timeline{
+        overflow:visible;
+    }
+    .course-panel{
+        position: absolute;
+        left: 100%;
+        top: 5rem;
+
+        width: 23rem;
+        height: 70%;
+        padding: 1rem;
+        margin-left: 1rem;
+        opacity: 0;
+
+        z-index: 1;
+    }
+    .show-course-panel{
+        opacity: 1;
+        z-index: 2;
+        transform: translateY(0);
+    }
+    .left-svg{
+        width: 100%;
+        display:none;
+    }
+
+
+} 
+
+
+
+
+
+
+
+
+// All Screen Sizes between 1026 and 1200
+@media only screen and (min-width:1026px) and (max-width:1200px){   // Desktops
+    ///////////////////////////////////////////////////
+    /// 
+    ///     navbar
+    /// 
+    /// ///////////////////////////////////////////////
+
+
+    //////////////////////////////////////////////////
+    /// 
+    ///     Portfolio Page
+    /// 
+    /// /////////////////////////////////////////////
+
+
+        //////////////////////////////////////////////////
+    /// 
+    /// Employment Page
+    /// 
+    //////////////////////////////////////////////////
+    .webdev-panel{
+        left: -25rem;
+    }
+    .show-webdev-panel{
+        transform: translateX(25rem);
+        opacity:1;
+        z-index:3;
+    }
+    
+    
+    .artist-panel{
+        right: -26rem;
+    }
+    .show-artist-panel{
+        transform: translateX(-26rem);
+        opacity:1;
+        z-index:3;
+    }
+    
+    .softeng-panel{
+        left: -26rem;
+    }
+    .show-softeng-panel{
+        transform: translateX(26rem);
+        opacity:1;
+        z-index:3;
+    }
+
+
+    //////////////////////////////////////////////////
+    /// 
+    /// Education Page
+    /// 
+    //////////////////////////////////////////////////
+
+    .main-left-stage{
+        justify-content: flex-start;
+    }
+    .timeline{
+        overflow:visible;
+    }
+    .course-panel{
+        position: absolute;
+        left: 100%;
+        top: 5rem;
+
+        width: 23rem;
+        height: 70%;
+        padding: 1rem;
+        margin-left: 1rem;
+        opacity: 0;
+
+        z-index: 1;
+    }
+    .show-course-panel{
+        opacity: 1;
+        z-index: 2;
+        transform: translateY(0);
+    }
+
+    .left-svg{
+        display:none;
+    }
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// All Screen Sizes between 1201 and 4801
+@media only screen and (min-width:1201px)  and (max-width:4801px){   // Extra Large Desktops and TV's
+    ///////////////////////////////////////////////////
+    /// 
+    ///     navbar
+    /// 
+    /// ///////////////////////////////////////////////
+
+
+    //////////////////////////////////////////////////
+    /// 
+    ///     Portfolio Page
+    /// 
+    /// /////////////////////////////////////////////
+    .portfolio-mobile{
+        margin-left: 1rem;
+    }
+
+
+
+    //////////////////////////////////////////////////
+    /// 
+    /// Employment Page
+    /// 
+    //////////////////////////////////////////////////
+    .webdev-panel{
+        left: -25rem;
+    }
+    .show-webdev-panel{
+        transform: translateX(25rem);
+        opacity:1;
+        z-index:3;
+    }
+    
+    
+    .artist-panel{
+        right: -26rem;
+    }
+    .show-artist-panel{
+        transform: translateX(-26rem);
+        opacity:1;
+        z-index:3;
+    }
+    
+    .softeng-panel{
+        left: -26rem;
+    }
+    .show-softeng-panel{
+        transform: translateX(26rem);
+        opacity:1;
+        z-index:3;
+    }
+
+
+
+    //////////////////////////////////////////////////
+    /// 
+    /// Education Page
+    /// 
+    //////////////////////////////////////////////////
+
+    .main-left-stage{
+        justify-content: center;
+    }
+    .timeline{
+        left: -7rem;
+        overflow:visible;
+    }
+    .course-panel{
+        position: absolute;
+        left: 100%;
+        top: 5rem;
+
+        width: 23rem;
+        height: 70%;
+        padding: 1rem;
+        margin-left: 1rem;
+        opacity: 0;
+
+        z-index: 1;
+    }
+    .show-course-panel{
+        opacity: 1;
+        z-index: 2;
+        transform: translateY(0);
+    }
+
+}

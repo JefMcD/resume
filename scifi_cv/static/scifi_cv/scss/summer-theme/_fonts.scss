@@ -1,0 +1,31 @@
+
+$font-stack1: grotesk, Arial, sans-serif;
+$font-stack2: domine-bold, serif;
+$logo-font: grotesk, Arial, sans-serif;
+$scifi: massive,Arial, sans-serif;
+
+@font-face {
+    font-family: grotesk;
+    src: url('../fonts/Grotesk/static/FamiljenGrotesk-Medium.ttf');
+}
+
+@font-face{
+    font-family: domine-bold;
+    src: url(../fonts/Cheltenham/Domine-Bold.ttf)
+}
+
+@font-face{
+    font-family: eras-std;
+    src: url(../fonts/eras/ERASDEMI.ttf);
+}
+
+
+@font-face{
+    font-family: lazenby;
+    src: url(../fonts/LazenbyCompLiquid.ttf);
+}
+
+@font-face{
+    font-family:massive;
+    src: url(../fonts/massive_retaliation.ttf)
+}

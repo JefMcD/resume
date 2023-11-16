@@ -1,0 +1,184 @@
+
+
+
+{% extends 'scifi_cv/main_layout.html' %}
+{% load static %}
+{% block title %}
+    Jef McDonald Portfolio
+{% endblock %}
+
+{% block pagespecific_javascript %}
+    <script src="{% static 'scifi_cv/js/portfolio.js' %}?v2.40" type="text/javascript" defer> </script>
+{% endblock %}
+
+{% block section %}
+
+
+
+<section class='portfolio-wrapper'>
+<!--
+    <div class='debug-window'>
+        <p id="viewsize"></p>
+    
+        <script>
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        
+        var x = document.getElementById("viewsize");
+        x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
+        </script>
+    
+        <div class='error-msg'>
+            {{error_message|safe}}
+        </div>
+    </div>
+-->
+
+    <div class="main-center-stage">
+
+            <div class="hero-box portfolio-desktop">
+                <div class='hero-image'>
+                    <img src="{% static 'scifi_cv/img/hero/drawing.png' %}" alt=''>
+                </div>
+                <div class="skills-wrapper">
+                    <div class="skills">
+                        <img class='github-logo {{animation}}' src="{% static 'scifi_cv/img/github-white.svg' %}" alt = "logo">
+                        <img class='django-logo {{animation}}' src="{% static 'scifi_cv/img/django-white.svg' %}" alt = "logo">
+                        <img class='python-logo {{animation}}' src="{% static 'scifi_cv/img/python-white.svg' %}" alt = "logo">
+                        <img class='html-logo {{animation}}' src="{% static 'scifi_cv/img/HTML-white.svg' %}" alt = "logo">
+                        <img class='sass-logo {{animation}}' src="{% static 'scifi_cv/img/SCSS-white.svg' %}" alt = "logo">
+                        <img class='js-logo {{animation}}' src="{% static 'scifi_cv/img/JS-white.svg' %}" alt = "logo">
+                        <img class='mysql-logo {{animation}}' src="{% static 'scifi_cv/img/MySQL-white.svg' %}" alt = "logo">
+                    </div>
+                </div>
+            </div>
+        
+
+            <div class='portfolio-mobile'>
+                <div class='semi-opaque-border'>
+                    <div class='door left {{animation}}'>
+                        <img src="{% static 'scifi_cv/img/portfolio/door-left.jpg' %}">
+                    </div>
+                    <div class='door right {{animation}}'>
+                        <img src="{% static 'scifi_cv/img/portfolio/door-right.jpg' %}">
+                    </div>
+                    <div class='folio-scroller {{open_foliopanel}}'>
+                        
+                        <div class='folio-item' id='Network.html'>
+                            <div class='website-name'>artBeat Social Network</div>
+                            <div class='site-image'>
+                                <a href="{% url 'scifi_cv:folio_blogs' 'network' %}">
+                                    <img src="{% static 'scifi_cv/img/portfolio/network.jpg' %}" alt="social network app">
+                                </a> 
+                            </div>
+                        </div>
+
+                        <div class='folio-item' id='JMC-Mail.html'>
+                            <div class='website-name'>JMC Mining Corp, Mail Client</div>
+                            <div class='site-image'>
+                                <a href="{% url 'scifi_cv:folio_blogs' 'jmc_mail' %}">
+                                    <img src="{% static 'scifi_cv/img/portfolio/jmc_mail.jpg' %}" alt="mail client app">
+                                </a> 
+                            </div>
+                        </div>
+
+                        <div class='folio-item' id='Lime-Auctions.html'>
+                            <div class='website-name'>Lime Auctions</div>
+                            <div class='site-image'>
+                                <a href="{% url 'scifi_cv:folio_blogs' 'lime_auctions' %}">
+                                    <img src="{% static 'scifi_cv/img/portfolio/lime_auctions.jpg' %}" alt="e-commerce auction app">
+                                </a> 
+                            </div>
+                        </div>
+
+                        <div class='folio-item' id='artillery-voo.html'>
+                            <div class='website-name'>Artillery Voo Comix</div>
+                            <div>
+                                <a href="{% url 'scifi_cv:folio_blogs' 'artillery-voo' %}">
+                                    <img src="{% static 'scifi_cv/img/portfolio/artillery.jpg' %}" alt="artilelry voo website">
+                                </a> 
+                            </div>
+                        </div>
+
+                        <div class='folio-item' id='weird-wiki.html'>
+                            <div class='website-name'>Comics Wiki</div>
+                            <div>
+                                <a href="{% url 'scifi_cv:folio_blogs' 'weird-wiki' %}">
+                                    <img src="{% static 'scifi_cv/img/portfolio/wiki.jpg' %}" alt="weird-wiki site">
+                                </a> 
+                            </div>
+                        </div>
+                        
+                        <div class='folio-item' id='jefmcd-resume.html'>
+                            <div class='website-name'>Jef McD Resumee</div>
+                            <div>
+                                <a href="{% url 'scifi_cv:folio_blogs' 'jefmcd-resume' %}">
+                                    <img src="{% static 'scifi_cv/img/portfolio/resume.jpg' %}" alt="resumee image">
+                                </a> 
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    
+
+    {% include 'scifi_cv/contact-form.html' %}
+
+    <div class='mobile-only-para'>
+        <div id="message-title">Personal Statement</div>
+        <div class="msg-para">
+            I am a Full-Stack Web Developer with a Degree in Software Engineering and experience working on major software development projects. I have skills in back end development with Python and Django, Relational Database design with MySQL, API implementation in Python and Front End Development with CSS/SASS and Javascript. In addition to this I can create the Graphic Design, Logos and  and Images for the site using traditional media and digital art techniques.
+        </div>
+    </div>
+
+
+    <div class='information-box'>
+        <div class="folio-titles-wrapper">
+            <section class='folio-titles-section'>
+                <h2 class='{{animation}}'>Portfolio: </h2>
+                <h4 class='animate'>{{sitename}}</h4>
+
+                <div class="btn contactBtn {{animation}}" data-contact-btn-click='true'>
+                    <div class="btn-hover-state" data-contact-btn-click='true'></div>
+                    <span data-contact-btn-click='true'>Contact</span>
+                </div>
+            <section>
+        </div>
+
+        <div class='message-of-the-day portfolio-desktop'>
+            <div id="message-title">Personal Statement</div>
+            <div class="msg-para">
+                I am a Web Developer with a Degree in Software Engineering and experience working on major software development projects. I am a  Full Stack developer  with skills in back end development with Python and Django, Relational Database design with MySQL, API implementation in Python and Front End Development with CSS/SASS and Javascript. In addition to this I can create the Graphic Design, Logos and  and Images for the site using traditional media and digital art techniques.
+            </div>
+
+        </div>
+    </div>
+<!--
+    {% include 'scifi_cv/footer.html' %}
+-->
+    <div class='folio-slidepanel'>
+        {% include folio_blogfile %}
+    </div>
+
+</section>
+
+
+
+
+{% endblock %}
+
+
+
+<!--
+    {% include 'scifi_cv/footer.html' %}
+-->
+
+                    <!--
+                    <div class='message-of-the-day portfolio-desktop'>
+                        <h2>Opportunities</h2>
+                        Message me for website development and any graphics you may need. No job too small or too large. Of particular interest are projects's related to; AI, Science, Sci-Fi, Horror, Music, Guitars, Comix and Graphic Art.
+                    </div>
+                -->

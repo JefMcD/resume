@@ -1,0 +1,292 @@
+
+
+@use 'blue-theme';
+@use 'fonts';
+
+.background-icon{
+    position:absolute;
+    top:50%;
+    left: 70%;
+    transform:translate(-50%, -50%);
+    width: 30%;
+
+    opacity:0.1;
+    img{
+        width: 500px
+    }
+} 
+
+.timeline-and-cube-container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    //border: 5px solid yellow;
+    //background-color: orange;
+}
+
+.timeline{
+    position: relative;
+    display:inline-block;
+
+    left: 0rem;
+    top: 0rem;
+
+    margin-top:0rem;
+    margin-left: 3rem;
+    width: 25rem;
+
+    z-index:2;
+
+    overflow: visible;
+
+    //background-color: purple;
+    //border: 2px solid rgb(223, 223, 223);
+
+
+
+    animation-name: fade-in;
+    animation-duration: 1500ms;
+    animation-timing-function: cubic-bezier();
+    animation-fill-mode: both;
+
+}
+.timeline::after{
+    content:'';
+    position: absolute;
+    bottom: 5rem;
+    left: 32.7%;
+    width: 4px;
+    height: 80%;
+    background: blue-theme.$lt-002;
+
+
+    margin-left: 3px;
+    z-index: 0;
+
+    transform: scaleY(100%);
+    transform-origin: bottom ;
+    animation-name: draw-line;
+    animation-duration: 1000ms;
+
+    animation-timing-function: ease-in;
+   
+}
+
+.svg-graphics{
+    position:absolute;
+    display:inline-block;
+    position: absolute;
+    left: 100%;
+    top: 5rem;
+
+    width: 23rem;
+    height: 70%;
+    padding: 1rem;
+    margin-left: 1rem;
+
+    //background: blue;
+    //border: 1px solid rgb(255, 255, 255);
+ 
+    padding: 10px;
+    z-index:0;
+    .drawing{
+        position: absolute;
+        top:10rem;
+        left:50%;
+        transform:translate(-50%, -50%);
+
+        width: 200px;
+        aspect-ratio:1/1;
+        opacity: 0.1;
+        //background-color:purple;
+        //border: 2px solid white;
+
+        img{
+            width: 100%;
+        }
+
+
+    }
+
+}
+.left-svg{
+    left: -100%
+}
+
+.container{
+    position: relative;
+    width: 16rem;
+
+    cursor: pointer;
+    //background-color: blue-theme.$lt-001;
+
+
+    img{
+        position: absolute;
+        
+        top: 50%;
+        left: 0%;
+        transform: translate(-50%, -50%);
+
+        width:2rem;
+
+        background-color: blue-theme.$dk-001;
+        border-radius: 50%;
+        z-index:1;
+    }
+
+}
+.year-box{
+    position: relative;
+
+    width: 5rem;
+    padding: 10px;
+    background: blue-theme.$red-001;
+    color: blue-theme.$white-001;
+
+    font-size: 12pt;
+
+    border: 2px solid blue-theme.$dk-002;
+    border-radius: 6px;
+
+}
+.year-box-arrow{
+    position:absolute;
+    top: 13px;
+    right: -15px;
+
+    height:15px;
+    width:15px;
+
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid blue-theme.$red-001;
+
+    z-index:1;
+
+}
+
+.text-box{
+    position: relative;
+    padding: 10px 10px;
+    margin-left: 1.5rem;
+    background-color: blue-theme.$lt-001;
+    border-radius: 6px;
+
+    font-size: 14px;
+    color: blue-theme.$dk-002;
+
+    border: 2px solid blue-theme.$purple-002;
+
+}
+.text-box:hover,
+.text-box:active,
+.text-box:focus{
+    background-color: blue-theme.$white-001;
+    border: 2px solid blue-theme.$red-001;
+}
+.left-container{
+    text-align: center;
+    width: 6rem;
+    margin-right: 1rem;
+    top: 0.5rem;
+    left: 0rem;
+}
+
+
+.right-container{
+    left: 34%;
+    top: -3rem;
+    margin-bottom: 0.5rem
+}
+
+
+.list-bullet{
+    position: absolute;
+        
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+
+    width:2rem;
+    aspect-ratio:1/1;
+    color: blue-theme.$dk-001;
+
+    border: 3px solid blue-theme.$lt-002;
+    border-radius: 50%;
+    z-index:2;
+}
+.bullet-center{
+    position: absolute;
+    
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+
+    width:1rem;
+    aspect-ratio:1/1;
+    background-color: blue-theme.$lt-001;
+
+    border-radius: 50%;
+    z-index:1;
+}
+.list-bullet:hover,
+.list-bullet:focus,
+.list-bullet:active{
+    border-color: blue-theme.$white-001;
+    filter: blue-theme.$blur
+}
+
+
+
+
+.course-top-margin{
+    position:absolute;
+    display:block;
+
+    top: 0rem;
+    left: 0rem;
+    background: blue-theme.$red-001;
+    width: 100%;
+    height: 2.5rem;
+
+    .close-btn{
+        display: block;
+        padding-top:0.3rem;
+        padding-left: 0.3rem;
+        width: 2rem;
+        aspect-ratio: 1/1;
+        filter: blue-theme.$orange-filter;
+        cursor: pointer;
+    }
+    .close-btn:hover,
+    .close-btn:active,
+    .close-btn:target{
+        filter: blue-theme.$lt-orange-filter;
+    }
+
+}
+
+
+/***********************************************************
+************* End Cube ***********************************/
+
+
+
+
+
+
+@keyframes draw-line{
+    0%{
+        opacity:0;
+        height:0;
+    }
+    100%{
+        opacity:1;
+        height:80%;
+    }
+}
+
+
+

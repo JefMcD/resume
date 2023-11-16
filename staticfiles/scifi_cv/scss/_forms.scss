@@ -1,0 +1,191 @@
+
+@use 'blue-theme';
+@use 'fonts';
+
+.contact-form{
+    position: absolute;
+    display: block;
+
+    top:7rem;
+    left: 2rem;
+
+    max-width:30rem;
+    height:80vh;
+    padding: 1.5rem;
+    padding-top: 3rem;
+
+    border: 2px solid red;
+    background-color: purple;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+    opacity: 0;
+    z-index: -1;
+
+    transition-property: animation opacity z-index;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier();
+
+}
+
+.show-contact-form{
+    opacity: 1;
+    z-index: 3;
+
+    animation: anime1 2s cubic-bezier(0.16, 1, 0.3, 1);
+    //animation-name: fade-in-up;
+    //animation-timing-function: cubic-bezier();
+    //animation-duration: 500ms;
+    //animation-fill-mode: both;
+}
+
+label{
+    display: inline-block;
+    width:7rem;
+    height: 2rem;
+    padding: 0.5rem;
+}
+
+.formfields-wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .charfield{
+        display: inline-block;
+        width:15rem;
+        height: 2rem;
+        padding: 0.5rem;
+
+    }
+    .formname{
+        display: inline-block;
+        width:15rem;
+        height: 2rem;
+        padding: 0.5rem;
+    }
+
+    .formcompany{
+        display: block;
+        width:100%;
+        height: 2rem;
+        padding: 0.5rem;
+    }
+
+    .form-emailfield{
+        display: block;
+        width:100%;
+        height: 2rem;
+        padding: 0.5rem;
+    }
+
+    .form-messagefield{
+        display: block;
+        width:100%;
+        padding: 0.5rem;
+
+    }
+    
+    .form-datefield{
+        display: block;
+        width: 10rem;
+        height: 2rem;
+        padding: 0.5rem;
+    }
+
+}
+
+
+.submit-btn-wrapper{
+    position:relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-top:3rem;
+
+
+}
+
+
+////////////////////////////////////////
+/// 
+///     form send button
+/// 
+////////////////////////////////////////
+.form-send-btn {
+    position: relative;
+    display: inline-block;
+
+    width: 150px;
+    height: 50px;
+
+    top: 0rem;
+    left: 0rem;
+
+    background-color: blue-theme.$red-001;
+    border-style: solid;
+    border-color: blue-theme.$lt-002;
+    border-width: 3px;
+
+    text-align: center;
+    cursor: pointer;
+    overflow:hidden;
+    z-index: 1;
+
+    span{
+        font-size: 12pt;
+        font-weight:400px;
+        z-index: 1;
+        color:blue-theme.$white-001;
+        transition-property: color, z-index;
+        transition-timing-function: ease-out;
+        transition-duration: 350ms;
+    }
+
+
+
+    .form-send-btn-hover-state {
+        position: absolute;
+        display: inline-block;
+    
+        width: 100%;
+        height: 100%;
+    
+        top: 100%;
+        left: 0;
+    
+        background-color:blue-theme.$white-001;
+    
+        transform: translateY(0);
+        transition-property: color,  background-color, transform;
+        transition-timing-function: ease-out;
+        transition-duration: 300ms;
+        transition-delay: 200ms;
+    
+        cursor: none;
+        pointer-events: none;
+        z-index: -1;
+    
+    }
+    
+
+}
+
+
+.form-send-btn:hover .form-send-btn-hover-state{
+    background-color:blue-theme.$white-001;
+    transform: translateY(-100%);
+    transition-duration: 500ms;
+
+
+    transition-property: color, background-color, transform;
+    transition-timing-function: ease-out;
+    transition-duration: 300ms;
+    transition-delay: 200ms;
+
+}
+
+.form-send-btn:hover span {
+    color: blue-theme.$orange-002;
+    z-index: 2;
+}
+

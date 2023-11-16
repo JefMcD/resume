@@ -1,0 +1,99 @@
+
+
+.orbitals-wrapper{
+    position:absolute;
+    width: 25rem;
+    aspect-ratio:1/1;
+
+    top: 10rem;
+    left:50%;
+    transform: translate(-50%, 0%);
+
+    animation: hibernate 1500ms ease-in;
+
+    .spinner{
+        animation-name: orbit;
+        animation-delay: 1000ms;
+        animation-duration: 1500ms;
+        animation-timing-function: cubic-bezier();
+        animation-iteration-count: 1;
+        animation-direction: alternate-reverse;
+    }
+
+    //background-color: green;
+    //padding: 5px;
+}
+
+
+.orbitals{
+    position: relative;
+
+    // this positions the ul in the center of the container. orbitals-wrapper
+    display: flex;
+    justify-content: center;    // main-axis
+    align-items: center;        // cross-axis
+    margin-top: 50%;            // this is need because align-items didnt work
+
+    li{
+        position:absolute;
+
+
+    }
+    li.b1{
+        //background-color: summer-theme.$dk-blue-001;
+        transform:rotate(102deg) translateX(150px) 
+    }
+    li.b2{
+        //background-color:summer-theme.$dk-blue-001;
+        transform:rotate(174deg) translateX(150px)
+    }
+    li.b3{
+        //background-color: summer-theme.$dk-blue-001;
+        transform:rotate(246deg) translateX(150px)
+    }
+    li.b4{
+       // background-color: summer-theme.$dk-blue-001;
+        transform:rotate(318deg) translateX(150px)
+    }
+    li.b5{
+        //background-color: summer-theme.$dk-blue-001;
+        transform:rotate(30deg) translateX(150px) 
+    }
+
+
+}
+
+.bubble{
+    position: relative;
+    width:5rem;
+    aspect-ratio: 1/1;
+    //border:2px solid white;
+    border-radius: 50%;
+
+   .text{
+    position:absolute;
+   }
+    img{
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width:5rem;
+
+
+    }
+}
+
+
+@keyframes orbit {
+    100% {
+      rotate: 1turn;
+    }
+  }
+
+
+@keyframes hibernate{
+    0%{opacity: 0}
+    50%{opacity: 0}
+    100%{opacity: 1}
+}

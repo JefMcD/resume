@@ -1,0 +1,354 @@
+@use 'blue-theme';
+@use 'fonts';
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden
+}
+
+body {
+    font-family: fonts.$font-stack1;
+    background-color: blue-theme.$white-001;
+    color: blue-theme.$lt-blue-001;
+}
+
+.main-wrapper{
+    position: relative;
+    display:flex;
+    flex-direction: row;
+
+    top: 0rem;
+    left:0;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    text-transform: uppercase;
+
+    background-image: url(../img/bg3.png);
+    background-color: blue-theme.$dk-blue-002;
+
+
+}
+
+.left-panel{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-basis:auto;
+    justify-content:end;    // main axis
+    align-items: center;    // cross axis
+
+    top: 0;
+    left: 0;
+    width: 35%;
+
+    height: 100vh;
+
+}
+
+.skills-wrapper{
+    position:relative;
+    display: inline-block;
+    top: 55%;
+    left: 3rem;
+    max-width: 15rem;
+}
+.skills{
+    position: relative;
+    display: flex;
+    height: 2rem;
+
+    img{
+        width: 100%;
+        margin-right: 0.3rem;
+
+    }
+
+    #github-logo{
+        opacity: 0;
+        animation: fade-in 500ms ease-in;
+        animation-delay: 2250ms;
+        animation-fill-mode: both;
+
+    }
+    #django-logo{
+        opacity: 0;
+        animation: fade-in 500ms ease-in;
+        animation-delay: 2000ms;
+        animation-fill-mode: both;
+
+    }
+    #python-logo{
+        opacity: 0;
+        animation: fade-in 500ms ease-in;
+        animation-delay: 1750ms;
+        animation-fill-mode: both;
+
+    }
+    #html-logo{
+        opacity: 0;
+        animation: fade-in 500ms ease-in;
+        animation-delay: 1500ms;
+        animation-fill-mode: both;
+
+    }
+    #sass-logo{
+        opacity: 0;
+        animation: fade-in 500ms ease-in;
+        animation-delay: 1250ms;
+        animation-fill-mode: both;
+
+    }
+    #js-logo{
+        opacity: 0;
+        animation: fade-in 500ms ease-in;
+        animation-delay: 1000ms;
+        animation-fill-mode: both;
+
+    }
+    #mysql-logo{
+        opacity: 0;
+        animation: fade-in 500ms ease-in;
+        animation-delay: 750ms;
+        animation-fill-mode: both;
+
+    }
+
+    z-index: 1;
+}
+
+.hero-wrapper{
+    position: relative;
+    display: inline-block;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    .hero-image{
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+
+        img{
+            max-width: 20rem;
+        }
+
+
+    }
+
+    z-index: 1;
+}
+
+
+.orbitals-wrapper{
+    position:relative;
+    top: 10%;
+    margin:auto;
+    margin-top: 10rem;
+
+    width: 25rem;
+    aspect-ratio:1/1;
+
+
+    animation: hibernate 5000ms ease-in;
+
+    .spinner{
+        animation-name: orbit;
+        animation-delay: 2500ms;
+        animation-duration: 2500ms;
+        animation-timing-function: cubic-bezier();
+        animation-iteration-count: 1;
+        animation-direction: alternate-reverse;
+    }
+
+    background-color: green;
+    padding: 5px;
+}
+
+
+.orbitals{
+    position: relative;
+
+    // this positions the ul in the center of the container. orbitals-wrapper
+    display: flex;
+    justify-content: center;    // main-axis
+    align-items: center;        // cross-axis
+    margin-top: 50%;            // this is need because align-items didnt work
+
+    li{
+        position:absolute;
+
+
+    }
+    li.b1{
+        //background-color: blue-theme.$dk-blue-001;
+        transform:rotate(102deg) translateX(150px) 
+    }
+    li.b2{
+        //background-color:blue-theme.$dk-blue-001;
+        transform:rotate(174deg) translateX(150px)
+    }
+    li.b3{
+        //background-color: blue-theme.$dk-blue-001;
+        transform:rotate(246deg) translateX(150px)
+    }
+    li.b4{
+       // background-color: blue-theme.$dk-blue-001;
+        transform:rotate(318deg) translateX(150px)
+    }
+    li.b5{
+        //background-color: blue-theme.$dk-blue-001;
+        transform:rotate(30deg) translateX(150px) 
+    }
+
+
+}
+
+.bubble{
+    position: relative;
+    width:5rem;
+    aspect-ratio: 1/1;
+    //border:2px solid white;
+    border-radius: 50%;
+
+   .text{
+    position:absolute;
+   }
+    img{
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width:5rem;
+
+
+    }
+}
+
+
+ 
+.welcome-message {
+    position: absolute;
+    overflow: visible;
+    left: 3rem;
+    top: 65%;
+    width: 400px;
+}
+
+
+.welcome-message h4 {
+    font-size: 20pt;
+    font-weight: 300;
+
+    margin-bottom: 20px;
+
+    animation: fade-in-up 750ms ease-in-out;
+    animation-delay: 500ms;
+    animation-fill-mode: both;
+}
+
+.welcome-message h2 {
+    font-size: 30pt;
+    font-weight: 900;
+
+    margin-bottom: 10px;
+
+    animation: fade-in-up 750ms ease-in-out;
+    animation-delay: 400ms;
+    animation-fill-mode: both;
+
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+
+    width: 150px;
+    height: 50px;
+
+    border-style: solid;
+    border-color: blue-theme.$grey-003;
+    border-width: 3px;
+
+    padding-top: 10px;
+    text-align: center;
+
+    animation: fade-in-up 750ms ease-in-out;
+    animation-delay: 600ms;
+    animation-fill-mode: both;
+
+    cursor: pointer;
+    overflow:hidden;
+    z-index: 2;
+}
+
+.btn span{
+    color:blue-theme.$white-001;
+    transition-property: color;
+    transition-timing-function: ease-out;
+    transition-duration: 350ms;
+}
+.btn:hover span {
+    color: blue-theme.$black-001;
+
+    transition-property: color;
+    transition-timing-function: ease-out;
+    transition-duration: 350ms;
+}
+
+.btn .btn-hover-state {
+    position: absolute;
+    display: inline-block;
+
+    width: 100%;
+    height: 100%;
+
+    top: 100%;
+    left: 0;
+
+    background-color:blue-theme.$white-001;
+
+    transform: translateY(0);
+    transition-property: color, transform;
+    transition-timing-function: ease-out;
+    transition-duration: 300ms;
+    transition-delay: 200ms;
+
+    cursor: none;
+    pointer-events: none;
+    z-index: -1;
+
+
+}
+
+.btn:hover .btn-hover-state{
+    transform: translateY(-100%);
+    transition-duration: 500ms;
+
+
+
+    transition-property: color, transform;
+    transition-timing-function: ease-out;
+    transition-duration: 300ms;
+    transition-delay: 200ms;
+
+}
+
+
+@keyframes orbit {
+    100% {
+      rotate: 1turn;
+    }
+  }

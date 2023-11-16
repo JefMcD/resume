@@ -1,0 +1,236 @@
+@use 'blue-theme';
+@use 'fonts';
+
+
+/***********************************************************
+**
+**  The Cube
+**
+**
+***********************************************************/
+
+$cube_width: 10rem;
+$half_cubewidth: 5rem;
+:root {
+    --cube_width: 18rem;
+    --cube_half: 9rem
+  }
+.cube-stage{
+    position: relative;
+    display: inline-block;
+    width:29rem;
+    aspect-ratio: 1/1;
+    top: 0rem;
+    left: 0rem;
+    margin-left: 1rem;
+    z-index: 2;
+
+    //border: 2px solid white;
+    //background-color: purple;
+}
+
+.cube-field{
+    position: relative;
+    display: block;
+
+    width: 28rem;
+    aspect-ratio: 1/1;
+ 
+    top: 0;
+    left: 0;
+
+    margin-left: 0.3rem;
+    margin-top: 0.3rem;
+
+    //border: 2px solid yellow;
+    //background-color: orange;
+
+    perspective: 500px;
+    transform-style: preserve-3d;
+}
+
+.spinX{
+    transform: rotateX(360deg) ;
+}
+.spinY{
+    transform: rotateY(360deg);
+}
+.spinZ{
+    transform: rotateZ(360deg);
+}
+
+
+
+
+.cube{
+    position: absolute;
+    display: block;
+
+    width: 25rem;
+    aspect-ratio: 1/1;
+
+    top: 1rem;
+    left: 1rem;
+
+
+    //border: 2px solid lightseagreen;
+    //background-color: teal;
+
+    transform-style: preserve-3d;
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-delay: 0;
+    transition-timing-function: ease-in-out;
+}
+
+
+
+/****************************************************************
+*
+*   Rotate X(+90deg) => rotates fso that face is towards the ceiling
+*   Rotate X(-90deg) => rotates face towards the floor
+*   
+*   Rotate Y(+90deg) => rotates to the right facing right side
+*   Rotate Y(-90deg) => rotates to the left facing left side
+*
+*   Rotate Z(+90deg) => rotates around center to the right
+*   Rotate Z(-90deg) -> rotates around centre to the left
+*
+*****************************************************************/
+.cube-face::before{
+    position: absolute;
+    display: inline;
+    content:'cube-face';
+    top: 0;
+    left: 0;
+}
+
+$cube-side: 18rem;
+$half-cube-side: 9rem;
+.cube-face{
+    position:absolute;
+    display: block;
+    width: $cube-side;
+    aspect-ratio: 1/1;
+
+    //border: 1px solid white;
+    //background-color: rgb(65, 177, 158);
+
+    text-align: center;
+    padding:1rem;
+
+    top: 3.5rem;
+    left: 3.5rem;
+    opacity:1;
+    backface-visibility: hidden;
+}
+ .front-face{
+    transform: translateZ($half-cube-side) ;
+ }
+ .back-face{
+    transform: rotateY(180deg) translateZ($half-cube-side);
+ }
+.left-face{
+    transform: rotateY(-90deg) translateZ($half-cube-side);
+}
+.right-face{
+    transform: rotateY(90deg) translateZ($half-cube-side);
+}
+.top-face{
+    transform: rotateX(90deg) translateZ($half-cube-side);
+}
+.bottom-face{
+    transform: rotateX(-90deg) translateZ($half-cube-side);
+}
+
+
+
+.control-panel{
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;;
+
+}
+.rotate-btn{
+    position: relative;
+    display: inline-block;
+
+    top: 0;
+    left: 0;
+
+    width: 5rem;
+    height: 2rem;
+
+    text-align: center;
+    padding-top: 0.3rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    border: 2px solid white;
+    background-color: orangered;
+    color: white;
+    cursor: pointer;
+
+}
+
+
+
+
+/******************************************************
+***
+***     Cube Course Panels
+***
+********************************************************/
+.coursecube-panel{
+    position:absolute;
+    display:inline-block;
+
+    top: 0rem;
+    left: 0rem;
+    width: $cube-side;
+    aspect-ratio: 1/1;
+
+    color: blue-theme.$dk-002;
+    background-color: blue-theme.$lt-001;
+    //border: 2px solid blue-theme.$lt-003;
+
+    box-shadow:  0 0 0 #cccccc,
+    0 0 0 #ffffff,
+    5px 5px 5px #ffffff inset,
+    -5px -5px 5px #cccccc inset;
+    
+    //color: blue-theme.$yellow-002;
+    border-radius:0.5rem;
+
+    padding: 1rem;
+    opacity:1;
+
+    //transition-duration: 350ms;
+    //transition-property: transform, opacity, z-index ;
+    //transition-timing-function: ease-in-out;
+
+
+    font-size: 10pt;
+    
+    overflow:visible;
+    z-index: 1;
+
+    .course-details{
+        position: relative;
+        display: block;
+        h2{
+            font-size:12pt;
+            text-align: center;
+        }
+        h3{
+            font-size: 8pt;
+            text-align: center;
+        }
+        p{
+            margin-top:1rem;
+        }
+    }
+}
+
+
+

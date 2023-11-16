@@ -1,0 +1,277 @@
+
+
+
+{% extends 'scifi_cv/main_layout.html' %}
+{% load static %}
+{% block title %}
+    Jef McDonald Employment
+{% endblock %}
+
+{% block pagespecific_javascript %}
+    <script src="{% static 'scifi_cv/js/employment.js' %}?v0.01" type="text/javascript" defer> </script>
+{% endblock %}
+
+
+
+{% block section %}
+
+
+
+<section class='portfolio-wrapper'>
+<!--
+    <div class='debug-window'>
+        <p id="viewsize"></p>
+    
+        <script>
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        
+        var x = document.getElementById("viewsize");
+        x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
+        </script>
+    
+        <div class='error-msg'>
+            {{error_message|safe}}
+        </div>
+    </div>
+-->
+
+
+    
+    <div class="job-panel webdev-panel">
+        <div class='top-margin job-panel-closebtn'>
+            <img class='close-btn ' src="{% static 'scifi_cv/img/general/close.svg'  %}" alt='close btn' >
+        </div>
+ 
+        <div class='job-panel-main'>
+            {% include "scifi_cv/employment/web-dev.html" %}
+        </div>
+    </div>
+
+
+
+    <div class="job-panel lockdown-panel">
+
+        <div class='top-margin job-panel-closebtn'>
+            <img class='close-btn ' src="{% static 'scifi_cv/img/general/close.svg'  %}" alt='close btn' >
+        </div>
+
+        <div class='job-panel-main'>
+            {% include "scifi_cv/employment/lockdown.html" %}
+        </div>
+
+    </div>
+
+
+    <div class="job-panel artist-panel">
+
+        <div class='top-margin job-panel-closebtn'>
+            <img class='close-btn ' src="{% static 'scifi_cv/img/general/close.svg'  %}" alt='close btn' >
+        </div>
+
+        <div class='job-panel-main'>
+            {% include "scifi_cv/employment/artist.html" %}
+        </div>
+
+    </div>
+
+    <div class="job-panel softeng-panel">
+        <div class='top-margin job-panel-closebtn'>
+            <img class='close-btn ' src="{% static 'scifi_cv/img/general/close.svg'  %}" alt='close btn' >
+        </div>
+        <div class='job-panel-main'>
+            {% include "scifi_cv/employment/software-eng.html" %}
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="main-center-stage">
+        <div class='job-list'>
+            <div class="machine-animation">
+                <div class="cog cogsize-vsmall vscog1">
+                    <img src="{% static 'scifi_cv/img/employment/cogs/white/cog-vs1.svg' %}" alt="">
+                </div>
+                <div class="cog cogsize-vsmall vscog2">
+                    <img src="{% static 'scifi_cv/img/employment/cogs/white/cog-vs2.svg' %}" alt="">
+                </div>
+                <div class="cog cogsize-vsmall vscog3">
+                    <img src="{% static 'scifi_cv/img/employment/cogs/white/cog-vs3.svg' %}" alt="">
+                </div>
+                <div class="cog cogsize-vsmall vscog4">
+                    <img src="{% static 'scifi_cv/img/employment/cogs/white/rando4.svg' %}" alt="">
+                </div>
+                <div class="cog cogsize-vsmall vscog5">
+                    <img src="{% static 'scifi_cv/img/employment/cogs/white/cog-s1.svg' %}" alt="">
+                </div>
+
+                <div class="cog cogsize-sm smallcog1">
+                    <img src="{% static 'scifi_cv/img/employment/cogs/white/cog-s1.svg' %}" alt="">
+                </div>
+                <div class="cog cogsize-sm smallcog2">
+                    <img src="{% static 'scifi_cv/img/employment/cogs/white/cog-vs2.svg' %}" alt="">
+                </div>
+                <div class="cog cogsize-sm smallcog3">
+                    <img src="{% static 'scifi_cv/img/employment/cogs/white/spiral.svg' %}" alt="">
+                </div>
+                <div class="cog cogsize-sm lightbulb">
+                    <img src="{% static 'scifi_cv/img/employment/cogs/white/lightbulb.svg' %}" alt="">
+                </div>
+                <div class="cog cogsize-sm smallcog4">
+                    <img src="{% static 'scifi_cv/img/employment/cogs/white/cog-m1.svg' %}" alt="">
+                </div>
+
+
+                <div class="cog cogsize-med medcog1">
+                    <img src="{% static 'scifi_cv/img/employment/cogs/white/cog-m4.svg' %}" alt="">
+                </div>
+                <div class="cog cogsize-med medcog2">
+                    <img src="{% static 'scifi_cv/img/employment/cogs/white/cog-m2.svg' %}" alt="">
+                </div>
+                <div class="cog cogsize-med medcog3">
+                    <img src="{% static 'scifi_cv/img/employment/cogs/white/cog-m3.svg' %}" alt="">
+                </div>
+
+                <div class="cog main-cog">
+                    <img src="{% static 'scifi_cv/img/employment/cogs/white/main-cog.svg' %}" alt="">
+                </div>
+                <div class="cog money-cog">
+                    <img src="{% static 'scifi_cv/img/employment/cogs/white/cog-m5.svg' %}" alt="">
+                </div>
+                <div class="cog house-cog">
+                    <img src="{% static 'scifi_cv/img/employment/cogs/white/house-cog.svg' %}" alt="">
+                </div>
+                <div class="cog car-cog">
+                    <img src="{% static 'scifi_cv/img/employment/cogs/white/car-cog.svg' %}" alt="">
+                </div>
+
+                <div class="cog rando-size rando1">
+                    <img src="{% static 'scifi_cv/img/employment/cogs/white/rando1.svg' %}" alt="">
+                </div>
+                <div class="cog rando-size rando2">
+                    <img src="{% static 'scifi_cv/img/employment/cogs/white/rando2.svg' %}" alt="">
+                </div>
+                <div class="cog rando-size rando3">
+                    <img src="{% static 'scifi_cv/img/employment/cogs/white/rando3.svg' %}" alt="">
+                </div>
+                <div class="cog rando-size rando4">
+                    <img src="{% static 'scifi_cv/img/employment/cogs/white/rando4.svg' %}" alt="">
+                </div>
+
+            </div>
+
+            <ul>
+                <li class='job web-developer' data-job-flag='true' data-job-type='web-dev'>
+                    <div class='top ' data-job-flag='true' data-job-type='web-dev'>
+                        <div class='job-title ' data-job-flag='true' data-job-type='web-dev'>
+                            Web Developer
+                        </div>
+                    </div>
+
+                    <div class='bottom ' data-job-flag='true' data-job-type='web-dev'>
+                        <div class='job-summary' data-job-flag='true' data-job-type='web-dev'>
+                            Website Developer. 2022-Present.
+                        </div>
+                    </div>
+                </li>
+
+
+
+                <li class='job lockdown' data-job-flag='true' data-job-type='lockdown'>
+                    <div class='top ' data-job-flag='true' data-job-type='lockdown'>
+                        <div class='job-title ' data-job-flag='true' data-job-type='lockdown'>
+                            Lockdown
+                        </div>
+                    </div>
+
+                    <div class='bottom ' data-job-flag='true' data-job-type='lockdown'>
+                        <div class='job-summary ' data-job-flag='true' data-job-type='lockdown'>
+                            The Lockdown Years. 2020-2022
+                        </div>
+                    </div>
+                </li>
+
+
+
+                <li class='job artist' data-job-flag='true' data-job-type='artist'>
+                    <div class='top ' data-job-flag='true' data-job-type='artist'>
+
+                        <div class='job-title ' data-job-flag='true' data-job-type='artist'>
+                            Graphic Artist
+                        </div>
+                    </div>
+
+                    <div class='bottom ' data-job-flag='true' data-job-type='artist'>
+                        <div class='job-summary ' data-job-flag='true' data-job-type='artist'>
+                            Freelance Graphic Artist. 2010-2020
+                        </div>
+                    </div>
+                </li>
+
+
+
+
+                <li class='job software-eng ' data-job-flag='true' data-job-type='soft-eng'>
+                    <div class='top' data-job-flag='true' data-job-type='soft-eng'>
+                        <div class='job-title ' data-job-flag='true' data-job-type='soft-eng'>
+                            Software Engineer
+                        </div>
+                    </div>
+
+                    <div class='bottom ' data-job-flag='true' data-job-type='soft-eng'>
+                        <div class='job-summary ' data-job-flag='true' data-job-type='soft-eng'>
+                            Software Engineering. 
+                         </div>
+                         <div class='job-years ' data-job-flag='true' data-job-type='soft-eng'>
+                            2002-2010. 
+                         </div>
+                    </div>
+                </li>
+
+
+
+
+
+  
+            </ul>
+        </div>
+
+    </div>
+
+
+
+
+    {% include 'scifi_cv/contact-form.html' %}
+    
+    <div class='information-box'>
+        <div class="folio-titles-wrapper">
+            <section class='folio-titles-section'>
+                <h2 class='{{animation}}'>Employment: </h2>
+                <h4 class='animate'>{{sitename}}</h4>
+
+                <div class="btn contactBtn {{animation}}" data-contact-btn-click='true'>
+                    <div class="btn-hover-state" data-contact-btn-click='true'></div>
+                    <span data-contact-btn-click='true'>Contact</span>
+
+                </div>
+ 
+            <section>
+        </div>
+        <div class='message-of-the-day portfolio-desktop'>
+            <h2>Opportunities</h2>
+            I'm currently Looking for Web App development Projects to build for my portfolio. Of particular interest are projects's related to; AI, Science, Sci-Fi, Horror, Music, Guitars, Comix and Graphic Art. So if you need a site, contact me through the enquiry form! 
+        </div>
+    </div>
+
+    {% include 'scifi_cv/footer.html' %}
+
+
+</section>
+
+
+
+
+{% endblock %}

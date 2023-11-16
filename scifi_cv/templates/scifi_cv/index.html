@@ -1,0 +1,112 @@
+
+
+
+{% extends 'scifi_cv/main_layout.html' %}
+{% load static %}
+{% block title %}
+    Jef McDonald Resume
+{% endblock %}
+
+{% block section %}
+
+<main class="main-wrapper">
+
+    <div class='quote-box'>
+        <!----
+        <h3>
+        "Whoever invented the word 'Foolproof, underestimated the ingenuity of Fools"
+        </h3>
+    -->
+    </div>
+
+    <section class='index-wrapper'>
+        <div class='hero-image'>
+            <img src="{% static 'scifi_cv/img/hero/drawing.png' %}" alt=''>
+        </div>
+
+        <div class="skills-wrapper">
+            <div class="skills">
+                <img id='github-logo' src="{% static 'scifi_cv/img/github-white.svg' %}" alt = "logo">
+                <img id='django-logo' src="{% static 'scifi_cv/img/django-white.svg' %}" alt = "logo">
+                <img id='python-logo' src="{% static 'scifi_cv/img/python-white.svg' %}" alt = "logo">
+                <img id='html-logo' src="{% static 'scifi_cv/img/HTML-white.svg' %}" alt = "logo">
+                <img id='sass-logo' src="{% static 'scifi_cv/img/SCSS-white.svg' %}" alt = "logo">
+                <img id='js-logo' src="{% static 'scifi_cv/img/JS-white.svg' %}" alt = "logo">
+                <img id='mysql-logo' src="{% static 'scifi_cv/img/MySQL-white.svg' %}" alt = "logo">
+            </div>
+        </div>
+        <div class="page-labels">
+            <section class='intro-page'>
+                <h2>Web Developer</h2>
+                <h4>Graphic Artist:Designer</h4>
+                <div class="btn animate">
+                    <div class="btn-hover-state"></div>
+                    <span>Contact</span>
+                </div>
+            <section>
+        </div>
+
+
+
+
+        <div class='orbitals-wrapper'>
+            <ul class='orbitals'>
+                <li class='b0'>
+                    <div class="bubble">
+                        <img src="{% static 'scifi_cv/img/laptop.png' %}" alt="ul centre">
+                    </div>
+                </li>
+                <li class='b1 spinner'>
+                    <div class="bubble">
+                        <img src="{% static 'scifi_cv/img/bubble.png' %}" alt="ul centre">
+                    </div>
+                </li>
+                <li class='b2 spinner'>
+                    <div class="bubble">
+                        <img src="{% static 'scifi_cv/img/bubble.png' %}" alt="ul centre">
+                    </div>
+                </li>
+                <li class='b3 spinner'>
+                    <div class="bubble">
+                        
+                        <img src="{% static 'scifi_cv/img/bubble.png' %}" alt="ul centre">
+                    </div>
+                </li>
+                <li class='b4 spinner'>
+                    <div class="bubble">
+                        <img src="{% static 'scifi_cv/img/bubble.png' %}" alt="ul centre">
+                    </div>
+                </li>
+                <li class='b5 spinner'>
+                    <div class="bubble">
+                        <img src="{% static 'scifi_cv/img/bubble.png' %}" alt="ul centre">
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+</main>
+<!----
+<p id="demo"></p>
+
+<script>
+var w = window.innerWidth;
+var h = window.innerHeight;
+
+var x = document.getElementById("demo");
+x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
+</script>
+-->
+
+
+{% endblock %}

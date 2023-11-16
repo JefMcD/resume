@@ -1,0 +1,25 @@
+
+{% load static%}
+
+<div class='contact-form'>
+    <div class='top-margin'>
+        <img id='contactForm-closeBtn' class='close-btn' src="{% static 'scifi_cv/img/general/close.svg'  %}" alt='close btn' >
+    </div>
+
+    <form autocomplete='on' id='contact_form' name='contact_form' action="/enquiry_thanks" method="POST">
+        {% csrf_token %}
+            <div class='formfields-wrapper'>
+                <h2>Enquiries</h2>
+                {{contact_form.as_p}}
+            </div>
+
+            <div class='submit-btn-wrapper'>
+                <button class="form-send-btn" >
+                    <!-- <div class="form-send-btn-hover-state" data-formbtn-click='true'></div>-->
+                    <div class="form-send-btn-hover-state" ></div>
+                    <span>SEND</span>
+                </button>
+
+            </div>
+    </form>
+</div>

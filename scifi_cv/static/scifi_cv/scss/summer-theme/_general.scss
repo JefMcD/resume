@@ -1,0 +1,341 @@
+@use 'summer-theme';
+@use 'fonts';
+
+.portfolio-desktop{
+
+
+}
+
+
+.portfolio-wrapper{
+    position: relative;
+    display: block;
+
+    top: 0rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url(../img/portfolio-yellow-bg.png);
+    background-color:summer-theme.$lt-003;
+    border: 5px solid blue;
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+.main-center-stage{
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+
+    top: summer-theme.$nav-offset;
+    left: 0;
+
+    //background-color: rgb(0, 158, 53);
+    //border: 5px solid rgb(227, 227, 253);
+}
+
+.main-left-stage{
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+
+    margin-left: 3rem;
+
+    top: summer-theme.$nav-offset;
+    left: 0;
+
+    //background-color: rgb(0, 158, 53);
+    //border: 5px solid rgb(227, 227, 253);
+}
+
+
+/********************************************************
+***
+***     Folio Titles Block Begin
+*** 
+*********************************************************/
+.folio-titles-wrapper {
+    position: relative;
+    display:block;
+    top:0;
+    left: 0rem;
+
+    padding: 1rem;
+
+    width: 20rem;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    //background-color: rgb(115, 192, 0);
+    //border: 1px solid summer-theme.$lt-001;
+    //border-radius: 4px;
+}
+.folio-titles-section{
+    position:relative;
+    display: block;
+
+    top: 0;
+    left: 3rem;
+}
+
+.folio-titles-wrapper h2 {
+    font-size: 30pt;
+    font-weight: 900;
+
+    margin-bottom: 10px;
+
+}
+h2.animate{
+    animation: fade-in-up 750ms ease-in-out;
+    animation-delay: 400ms;
+    animation-fill-mode: both;
+}
+.folio-titles-wrapper h4 {
+    font-size: 20pt;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+h4.animate{
+    animation: fade-in-up 750ms ease-in-out;
+    animation-delay: 500ms;
+    animation-fill-mode: both;
+}
+
+
+.btn {
+    position: relative;
+    display: inline-block;
+
+    width: 150px;
+    height: 50px;
+
+    border-style: solid;
+    border-color: summer-theme.$lt-002;
+    border-width: 3px;
+
+    padding-top: 10px;
+    text-align: center;
+    cursor: pointer;
+    overflow:hidden;
+    z-index: 2;
+}
+.btn.animate{
+    animation: fade-in-up 750ms ease-in-out;
+    animation-delay: 600ms;
+    animation-fill-mode: both;
+}
+
+
+.btn span{
+    color:summer-theme.$white-001;
+    transition-property: color;
+    transition-timing-function: ease-out;
+    transition-duration: 350ms;
+}
+.btn:hover span {
+    color: summer-theme.$black-001;
+
+    transition-property: color;
+    transition-timing-function: ease-out;
+    transition-duration: 350ms;
+}
+
+.btn .btn-hover-state {
+    position: absolute;
+    display: inline-block;
+
+    width: 100%;
+    height: 100%;
+
+    top: 100%;
+    left: 0;
+
+    background-color:summer-theme.$white-001;
+
+    transform: translateY(0);
+    transition-property: color, transform;
+    transition-timing-function: ease-out;
+    transition-duration: 300ms;
+    transition-delay: 200ms;
+
+    cursor: none;
+    pointer-events: none;
+    z-index: -1;
+
+
+}
+
+.btn:hover .btn-hover-state{
+    transform: translateY(-100%);
+    transition-duration: 500ms;
+
+
+
+    transition-property: color, transform;
+    transition-timing-function: ease-out;
+    transition-duration: 300ms;
+    transition-delay: 200ms;
+
+}
+/*********************************************************
+*** End of Folio Titles Block
+********************************************************/
+
+
+
+
+
+
+/********************************************************
+***
+***     Information Block Begin
+***
+*********************************************************/
+.information-box{
+    position:relative;
+    display: flex;
+    justify-content:flex-start;
+    top: summer-theme.$nav-offset;
+    width: 100%;
+
+
+    //background-color: purple;
+    //border: 2px solid summer-theme.$lt-002;
+    //border-radius: 4px;
+
+}
+
+.message-of-the-day{
+    position:relative;
+    width: 100%;
+    padding: 5rem 6rem 0rem 2rem;
+
+    font-size: 12pt;
+
+    //background-color: rgb(190, 109, 3);
+    //border: 2px solid summer-theme.$lt-002;
+    //border-radius: 4px;
+
+    overflow:hidden;
+
+    h2{
+        font-size:18pt;
+        font-weight: 600;
+    }
+
+}
+
+.footer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    top: summer-theme.$nav-offset;
+    width: 100%;
+
+    margin-top: 1rem;
+
+    //background-color: rgb(224, 202, 5);
+    //border: 2px solid summer-theme.$lt-002;
+    //border-radius: 4px;
+
+    z-index:1;
+    .icons{
+        padding: 0.2rem;
+        img{
+            width: 1.5rem;
+        }
+    }
+}
+
+
+/********************************************************
+***
+***     End Information Block
+***
+*********************************************************/
+
+.debug-window{
+    position: absolute;
+
+    top: 7rem;
+    left: 3rem;
+
+    width: 20rem;
+    height: 30rem;
+
+    border: 2px solid summer-theme.$white-001;
+    background-color: summer-theme.$lt-001;
+
+    color: summer-theme.$dk-001;
+
+
+    #viewsize{
+        color: black;
+    }
+
+}
+
+.debug-msg{
+
+}
+
+
+.overlay{
+    position:absolute;
+}
+
+.overlay-enable{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.50);
+
+    z-index:2;
+}
+
+
+
+
+
+/*********************************************************
+***
+***     General Styles for All Pages
+***
+*********************************************************/
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0; 
+    height: 100%; 
+    //overflow: hidden // switch off scrollbars
+}
+
+body {
+    font-family: fonts.$font-stack1;
+    color: summer-theme.$white-001;
+}
+
+
+
+/*********************************************************
+***
+***     End General Styles for All Pages
+***
+*********************************************************/

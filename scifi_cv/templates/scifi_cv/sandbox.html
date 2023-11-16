@@ -1,0 +1,220 @@
+
+
+
+{% extends 'scifi_cv/main_layout.html' %}
+{% load static %}
+{% block title %}
+    Jef McDonald Portfolio
+{% endblock %}
+
+
+{% block pagespecific_javascript %}
+    <script src="{% static 'scifi_cv/js/cube.js' %}?v0.01" type="text/javascript" defer> </script>
+{% endblock %}
+
+
+
+
+{% block section %}
+
+
+
+<section class='portfolio-wrapper'>
+<!----
+    <div class='debug-window'>
+        <p id="viewsize"></p>
+    
+        <script>
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        
+        var x = document.getElementById("viewsize");
+        x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
+        </script>
+    
+        <div class='error-msg'>
+            {{error_message|safe}}
+        </div>
+    </div>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="main-left-stage education-page-media-query">
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+<div class='card'><!--This is the stage and provides a stable bakcground that doesnt move-->
+ 
+
+      
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {% include 'scifi_cv/contact-form.html' %}
+    
+    <div class='information-box'>
+        <div class="folio-titles-wrapper">
+            <section class='folio-titles-section'>
+                <h2 class='{{animation}}'>Education: </h2>
+                <h4 class='animate'>{{sitename}}</h4>
+
+                <div class="btn contactBtn {{animation}}" data-contact-btn-click='true'>
+                    <div class="btn-hover-state" data-contact-btn-click='true'></div>
+                    <span data-contact-btn-click='true'>Contact</span>
+
+                </div>
+ 
+            <section>
+        </div>
+        <div class='message-of-the-day portfolio-desktop'>
+            <h2>Opportunities</h2>
+            Free Website Development. I'm currently Looking for Interesting Projects to work on for my portfolio. Of particular interest are projects's related to; AI, Science, Sci-Fi, Horror, Music, Guitars, Comix and Graphic Art. So if you've got an interesting project and would like a Free website, hit me up.  
+        </div>
+    </div>
+
+    {% include 'scifi_cv/footer.html' %}
+
+
+
+</section>
+
+
+
+
+{% endblock %}

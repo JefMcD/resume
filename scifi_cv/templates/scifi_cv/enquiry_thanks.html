@@ -1,0 +1,42 @@
+
+
+
+{% extends 'scifi_cv/main_layout.html' %}
+{% load static %}
+{% block title %}
+    Jef McDonald Portfolio
+{% endblock %}
+
+{% block section %}
+
+
+
+<section class='portfolio-wrapper'>
+
+    <div class="main-center-stage">
+            <div class='hero-image'>
+                <img src="{% static 'scifi_cv/img/hero/drawing.png' %}" alt=''>
+            </div>
+
+    </div>
+
+
+    <div class='information-box'>
+        <div class="folio-titles-wrapper">
+            <section class='folio-titles-section'>
+                <h2>Enquiry Sent: </h2>
+                <h4>I'll be in touch soon :)</h4>
+
+            <section>
+        </div>
+ 
+    </div>
+
+    <div class='footer portfolio-desktop'>
+        {% include 'scifi_cv/footer.html' %}
+    </div>
+
+</section>
+
+
+{% endblock %}

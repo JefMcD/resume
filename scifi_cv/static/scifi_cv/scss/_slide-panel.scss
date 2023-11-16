@@ -1,0 +1,539 @@
+
+@use 'summer-theme';
+@use 'fonts';
+
+
+
+
+/********************************************************
+***
+***     Hidden Slide Panel Block (Portfolio) Begin
+*** 
+*********************************************************/
+
+.folio-slidepanel{
+    position:absolute;
+    display:block;
+
+    top: 6rem;
+    right: -27rem;
+
+    width: 27rem;
+    height: 85%;
+
+    padding: 1rem;
+
+    background-color: summer-theme.$lt-001;
+    border: 2px solid summer-theme.$dk-002;
+    color: summer-theme.$yellow-002;
+    border-radius:4px;
+
+    opacity:0.10;
+
+    transition-duration: 350ms;
+    transition-property: transform, opacity ;
+    transition-timing-function: ease-in-out;
+    
+    overflow:hidden;
+    z-index: 3;
+ 
+}
+
+.foliopanel-contents{
+    margin-top: 2rem;
+    font-size: 12pt;
+    div{
+        margin-bottom: 0.5rem;
+    }
+    a{
+        color: summer-theme.$dk-002;
+    }
+    a:hover,
+    a:focus,
+    a:target{
+        color: summer-theme.$dk-001;
+    }
+
+    .folio-summary-mainimage{
+        position:relative;
+        display:flex;
+    
+        justify-content:space-around;
+
+        text-align: center;
+
+        a img{
+            border: 1px solid summer-theme.$lt-002;
+            margin-top: 0.5rem;
+            border-radius: 4px;
+            margin-left: auto;
+            margin-right: auto;
+            width:90%;
+            object-fit:contain;
+    
+        }
+        a img:hover,
+        a img:target,
+        a img:focus{
+            filter:summer-theme.$sepia-filter-off;
+        }
+    }
+
+    .tech-used-box{
+        display: flex;
+        justify-content: center;
+        flex-basis: 2rem;
+        width:25rem;
+        margin: auto;
+        border: 1px solid summer-theme.$lt-002;
+        margin-top: 0.5rem;
+        border-radius: 4px;
+        padding: 1rem;
+
+        img{
+            width: 2.5rem;
+            flex-shrink: 1;
+            margin-right: 0.3rem;
+
+            // Alter svg color
+            filter: summer-theme.$orange-filter
+        }
+
+    }
+
+}
+
+
+
+
+
+
+.open-folio-slidepanel{
+    opacity: 1;
+    transform:translateX(-27rem) ;
+}
+/*
+.close-folio-slidepanel{
+    animation-name: close-folio-summary;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+}
+
+
+
+.open-folio-slidepanel{
+    animation-name: show-folio-summary;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+    
+    opacity: 1;
+    transform:translateX(-300px) ;
+}
+
+.close-folio-slidepanel{
+    opacity:0.5;
+    transition-duration: 1500ms;
+    transition-timing-function: ease-out;
+    transform:translateX(100%)
+}
+
+.open-folio-slidepanel{
+    animation-name: show-folio-summary;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+}
+.close-folio-slidepanel{
+    animation-name: close-folio-summary;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+}
+
+*/
+
+@keyframes show-folio-summary{
+    /* move panel to the left and change opacity from 0 to 1*/
+    0%{
+        opacity:0;
+
+    }
+
+    100%{
+        opacity:1;
+        transform:translateX(-300px)
+    }
+
+}
+
+@keyframes close-folio-summary{
+    /* move panel to the left and change opacity from 0 to 1*/
+    0%{
+        opacity:1;
+
+    }
+
+    100%{
+        opacity:0;
+        transform:translateX(100%)
+    }
+
+}
+
+/********************************************************
+***
+***     Hidden Slide Panel (Portfolio) Block End
+*** 
+*********************************************************/
+
+
+
+
+
+
+/********************************************************
+***
+***     Hidden Slide Panel Block (Employment) Begin
+*** 
+*********************************************************/
+$panel_width: 30rem;
+.job-panel{
+    position:absolute;
+    display:block;
+
+    top: 5rem;
+    width: $panel_width;
+    height: 90%;
+    padding: 1rem;
+    padding-top:2rem;
+
+    background-color: summer-theme.$lt-001;
+    border: 2px solid summer-theme.$dk-002;
+    color: summer-theme.$yellow-002;
+    border-radius:4px;
+
+    opacity:0;
+
+    transition-duration: 350ms;
+    transition-property: transform, opacity ;
+    transition-timing-function: ease-in-out;
+
+    font-size: 14pt;
+    
+    overflow-x:hidden;
+    overflow-y: visible;
+    z-index: 3;
+}
+
+.active-panel{
+    // class for javascript selector to work
+}
+
+.lockdown-panel{
+    right: -$panel_width;
+}
+.show-lockdown-panel{
+    transform: translateX(-100%);
+    opacity:1;
+    z-index:3;
+}
+
+.artist-panel{
+    right: -$panel_width;
+}
+.show-artist-panel{
+    transform: translateX(-100%);
+    opacity:1;
+    z-index:3;
+}
+
+
+.webdev-panel{
+    right: -$panel_width;
+}
+.show-webdev-panel{
+    transform: translateX(-100%);
+    opacity:1;
+    z-index:3;
+}
+
+
+.softeng-panel{
+    right: -$panel_width;
+}
+.show-softeng-panel{
+    transform: translateX(-100%);
+    opacity:1;
+    z-index:3;
+}
+
+
+
+/*********************************************************
+*
+*   tab panels
+*
+*
+**********************************************************/
+
+.tabrow {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    //background-color: purple;
+    //border: 2px solid white;
+
+    .tablinks {
+        position: relative;
+
+        width: 5rem;
+        height: 2rem;
+
+        padding-top: 0.2rem;
+        margin-right: 0.2rem;
+
+        z-index: 0;
+
+        font-size: 16px;
+        color:summer-theme.$red-001;
+        text-align: center;
+
+        border: 1px solid #AAA;
+        background:summer-theme.$lt-001;
+        border-radius: 0.2rem 0.2rem 0 0;
+
+        cursor: pointer;
+    }
+
+    .se-tabs{
+        width:10rem;
+    }
+
+    .tablinks.active-tab {
+        display: block;
+        background:summer-theme.$lt-002;
+        color: summer-theme.$dk-002;
+        z-index: 2;
+        border-bottom-color: summer-theme.$dk-002;
+    }
+}
+.tabrow:before {
+    z-index: 1;
+}
+.tabrow:after { // Bottom edge
+    position: absolute;
+    content: "";
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #2e2e2e;
+    z-index: 1;
+}
+
+.tabcontent{
+    font-size: 12pt;
+    overflow: hidden;
+    scrollbar-width: 0;
+    margin-top: 1rem;
+    div{
+        margin-top: 1rem;
+    }
+    .tldr{
+        margin-top: 0rem;
+    }
+    h1{
+        font-size: 20pt;
+    }
+    h2{
+        font-size: 18pt;
+    }
+    h3{
+        font-size:14pt;
+    }
+    h4{
+        font-size:10pt;
+    }
+    img{
+        width:100%;
+    }
+}
+
+
+
+#art-job-summary{
+    display:block;
+}
+#art1{
+    display: none;
+}
+#art2{
+    display: none;
+}
+#art3{
+    display: none;
+}
+
+#se-job-summary{
+    display:block;
+}
+#se-tab1{
+    display: none;
+}
+#se-tab2{
+    display: none;
+}
+#se-tab3{
+    display: none;
+}
+
+#wd-frontend{
+    display:block;
+}
+#wd-backend{
+    display: none;
+}
+#wd-graphics{
+    display: none;
+}
+#wd-admin{
+    display: none;
+}
+#wd-skillset{
+    display: none;
+}
+
+#lockdown1{
+    display:block;
+}
+#lockdown2{
+    display:none;
+}
+#lockdown3{
+    display:none;
+}
+
+.top-margin{
+    position:absolute;
+    display:block;
+
+    top: 0rem;
+    left: 0rem;
+    background: summer-theme.$red-001;
+    width: 100%;
+    height: 2.5rem;
+
+    .close-btn{
+        display: block;
+        padding-top:0.3rem;
+        padding-left: 0.3rem;
+        width: 2rem;
+        aspect-ratio: 1/1;
+        filter: summer-theme.$orange-filter;
+        cursor: pointer;
+    }
+    .close-btn:hover,
+    .close-btn:active,
+    .close-btn:target{
+        filter: summer-theme.$lt-orange-filter;
+    }
+
+}
+
+.job-panel-main{
+    margin-top:1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************************
+***
+***     Hidden Slide Panel Block (Education) Begin
+*** 
+*********************************************************/
+.course-panel{
+    position:absolute;
+    display:block;
+
+    top: 35rem;
+    left: 3rem;
+    width: 23rem;
+    height: 70%;
+    padding: 1rem;
+    margin-left: 1rem;
+
+    background-color: summer-theme.$white-001;
+    border: 2px solid summer-theme.$lt-003;
+
+    box-shadow:  0 0 0 #cccccc,
+    0 0 0 #ffffff,
+    5px 5px 5px #ffffff inset,
+    -5px -5px 5px #cccccc inset;
+    
+    color: summer-theme.$yellow-002;
+    border-radius:0.5rem;
+
+    opacity:0;
+
+    transition-duration: 250ms;
+    transition-property: transform, opacity;
+    transition-timing-function: ease-in-out;
+
+    font-size: 14pt;
+    
+    overflow:hidden;
+    z-index: 3;
+
+ 
+
+    .course-details{
+        position: relative;
+        display: block;
+        top:2rem;
+        h2{
+            font-size:16pt;
+            text-align: center;
+        }
+        h3{
+            font-size: 12pt;
+            text-align: center;
+        }
+        p{
+            margin-top:1rem;
+        }
+    }
+}
+.show-course-panel{
+
+    opacity: 1;
+
+    transform: translateY(-100%);
+
+    transition-duration: 350ms;
+    transition-property: transform, opacity;
+    transition-timing-function: ease-in-out;
+
+}
+
+
+/********************************************************
+***
+***  END Hidden Slide Panel Block (Education) END
+*** 
+*********************************************************/
