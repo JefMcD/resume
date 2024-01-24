@@ -2,3 +2,6 @@
 /.env-gmail
 /.env-ifastnet
 /.env*
+docs
+/docs
+../docs
